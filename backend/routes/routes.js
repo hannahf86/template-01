@@ -6,6 +6,7 @@
 // REQUIRED
 const express = require('express')
 const router = express.Router();
+const BasicPost = require('../Models/basicSchema')
 
 // GET all
 router.get('/', (req, res) => {
@@ -18,8 +19,15 @@ router.get('/:id', (req, res) => {
 })
 
 // POST create data
-router.post('/', (req, res) => {
-    res.json({mssg: "POST or create single data"})
+router.post('/', async (req, res) => {
+    const { title, subtitle, tags, newPost } = req.body;
+
+    try {
+        const newArticle = await BasicPost.create({ title, subtitle, tags, newPost  })
+        res.status(200).json(newArticle)
+    } catch (error) {
+        res.status(400).json({error: error})
+    }
 })
 
 // DELETE data

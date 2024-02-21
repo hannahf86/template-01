@@ -4,7 +4,7 @@ const express = require('express')
 const templateRoutes = require('./routes/routes')
 const mongoose = require('mongoose')
 
-// ROUTES
+// MODELS
 
 
 // EXPRESS APP
