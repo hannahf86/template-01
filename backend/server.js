@@ -4,9 +4,6 @@ const express = require('express')
 const templateRoutes = require('./routes/routes')
 const mongoose = require('mongoose')
 
-// MODELS
-
-
 // EXPRESS APP
 const app = express()
 
