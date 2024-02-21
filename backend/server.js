@@ -1,6 +1,9 @@
 // REQUIRED
 const express = require('express')
 require('dotenv').config()
+const templateRoutes = require('./routes/routes')
+
+// ROUTES
 
 
 // EXPRESS APP
@@ -18,6 +21,4 @@ app.listen(process.env.PORT, () => {
 })
 
 // ROUTE HANDLER
-app.get('/', (req, res) => {
-    res.json({mssg: 'Welcome to the app'})
-})
+app.use('/api/routes', templateRoutes)
