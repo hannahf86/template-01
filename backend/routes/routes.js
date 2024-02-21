@@ -28,7 +28,7 @@ router.delete('/:id', (req, res) => {
 })
 
 // PATCH or update data
-router.post('/:id', (req, res) => {
+router.patch('/:id', (req, res) => {
     res.json({mssg: "PATCH or update single data"})
 })
 
