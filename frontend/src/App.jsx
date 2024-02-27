@@ -1,5 +1,14 @@
+// SCENES
+import Home from "./Scenes/Home";
+
+// COMPONENTS
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <Home />
+    </>
+  );
 }
 
 export default App;
