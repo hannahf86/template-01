@@ -1,8 +1,6 @@
 // ICONS
-import { FaNewspaper } from "react-icons/fa6";
-import { FaUserGraduate } from "react-icons/fa";
 import { HiHome, HiMail } from "react-icons/hi";
-import { HiMiniMusicalNote } from "react-icons/hi2";
+import { HiCog6Tooth, HiMiniNewspaper, HiMiniTrophy } from "react-icons/hi2";
 
 const Nav = () => {
   const styles = {
@@ -15,9 +13,10 @@ const Nav = () => {
   const desktopStyles = {
     desktopContainer: "hidden md:hidden sm:hidden lg:block ",
     background:
-      "fixed w-full flex flex-row justify-evenly z-10 bg-[#132A34] z-40 shadow-lg shadow-slate-600",
-    icons: "flex flex-row content-center text-neutral-200 xl:my-12 lg:my-8",
-    text: "flex items-center xl:text-xl lg:text-lg ml-3 tracking-widest hover:text-[#63C0E9] hover:scale-110 cursor-pointer",
+      "fixed w-full flex justify-between items-center bg-[#132A34] px-40 z-40 shadow-lg shadow-slate-600",
+    container: "flex text-neutral-200 xl:my-12 lg:my-8",
+    text: "xl:text-xl lg:text-md tracking-widest hover:text-[#63C0E9] hover:scale-110 cursor-pointer",
+    button: "bg-accent px-6 py-2 rounded-md",
   };
 
   return (
@@ -29,80 +28,57 @@ const Nav = () => {
             <HiHome size={28} className={styles.icon} />
           </a>
 
-          <a href="/#news">
-            <FaNewspaper size={25} className={styles.icon} />
-          </a>
-
           <a href="/#about">
-            <FaUserGraduate size={28} className={styles.icon} />
+            <HiMiniNewspaper size={28} className={styles.icon} />
           </a>
 
-          <a href="/#teaching">
-            <HiMiniMusicalNote size={28} className={styles.icon} />
+          <a href="/#classes">
+            <HiMiniTrophy size={28} className={styles.icon} />
           </a>
 
           <a href="/#contact">
             <HiMail size={28} className={styles.icon} />
           </a>
+
+          <a href="/#login">
+            <HiCog6Tooth size={28} className={styles.icon} />
+          </a>
         </div>
       </div>
+
+      {/* TO ADD OAUTH SETTINGS LOGIN */}
 
       {/* DESKTOP NAV*/}
       <div className={desktopStyles.desktopContainer}>
         <div id="desktop-nav" className={desktopStyles.background}>
-          <div className={desktopStyles.icons}>
+          <div className={desktopStyles.container}>
             <a href="/">
-              <h2 className={desktopStyles.text}>
-                <div className="mr-3">
-                  <HiHome />
-                </div>
-                HOME
-              </h2>
+              <h2 className={desktopStyles.text}>HOME</h2>
             </a>
           </div>
 
-          <div className={desktopStyles.icons}>
-            <a href="/#news">
-              <h2 className={desktopStyles.text}>
-                <div className="mr-3">
-                  <FaNewspaper />
-                </div>
-                NEWS
-              </h2>
+          <div className={desktopStyles.container}>
+            <a href="/#about">
+              <h2 className={desktopStyles.text}>ABOUT</h2>
             </a>
           </div>
 
-          <div className={desktopStyles.icons}>
-            <a href="/#desktop-about">
-              <h2 className={desktopStyles.text}>
-                <div className="mr-3">
-                  <FaUserGraduate />
-                </div>
-                ABOUT
-              </h2>
+          <div className={desktopStyles.container}>
+            <a href="/#classes">
+              <h2 className={desktopStyles.text}>CLASSES</h2>
             </a>
           </div>
 
-          <div className={desktopStyles.icons}>
-            <a href="/#teaching">
-              <h2 className={desktopStyles.text}>
-                <div className="mr-3">
-                  <HiMiniMusicalNote />
-                </div>
-                TEACHING
-              </h2>
-            </a>
-          </div>
-
-          <div className={desktopStyles.icons}>
+          <div className={desktopStyles.container}>
             <a href="/#contact">
               {" "}
-              <h2 className={desktopStyles.text}>
-                <div className="mr-3">
-                  <HiMail />
-                </div>
-                CONTACT
-              </h2>
+              <h2 className={desktopStyles.text}>CONTACT</h2>
+            </a>
+          </div>
+
+          <div className={desktopStyles.container}>
+            <a href="/#login">
+              <button className={desktopStyles.button}>LOGIN</button>
             </a>
           </div>
         </div>
